@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEP Express</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/gps.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <h1>CEP Express</h1>
+        <form id="cepForm">
+            <label for="cep">Digite o CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="Ex: 01001000" maxlength="8" required>
+            <button type="submit">Consultar</button>
+            <p id="loading" style="display:none;">Carregando...</p>
+        </form>
+
+        <div id="result" class="card" style="display: none;">
+            <h2>Endereço</h2>
+            <table>
+                <tr>
+                    <td><strong>CEP:</strong></td>
+                    <td id="cepResult"></td>
+                </tr>
+                <tr>
+                    <td><strong>Logradouro:</strong></td>
+                    <td id="logradouro"></td>
+                </tr>
+                <tr>
+                    <td><strong>Bairro:</strong></td>
+                    <td id="bairro"></td>
+                </tr>
+                <tr>
+                    <td><strong>Cidade:</strong></td>
+                    <td id="localidade"></td>
+                </tr>
+                <tr>
+                    <td><strong>Estado:</strong></td>
+                    <td id="uf"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
