@@ -1,7 +1,11 @@
+document.getElementById("cep").addEventListener("input", function() {
+    this.value = this.value.replace(/\D/g, ''); // Remove caracteres não numéricos em tempo real
+});
+
 document.getElementById("cepForm").addEventListener("submit", function(e) {
     e.preventDefault();
     
-    const cep = document.getElementById("cep").value.replace(/\D/g, ''); // Remove non-numeric characters
+    const cep = document.getElementById("cep").value;
     const result = document.getElementById("result");
     const loading = document.getElementById("loading");
     
@@ -34,3 +38,5 @@ document.getElementById("cepForm").addEventListener("submit", function(e) {
         alert("Por favor, insira um CEP válido com 8 dígitos.");
     }
 });
+
+
