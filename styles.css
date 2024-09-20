@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* estilos básicos para o corpo*/
 body {
     font-family: Arial, sans-serif;
     background-color: #1E201E; 
@@ -11,48 +12,50 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 10px;
 }
 
+/* envolve tudo */
 .container {
-    background-color: #3C3D37; 
+    background-color: #3C3D37;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
 }
 
+/* adicionar uma sombra bacana */
 .container:hover {
-    box-shadow: 0 0 15px 5px #ECDFCC; 
+    box-shadow: 0 0 15px 5px #ECDFCC;
 }
 
+/* estilo para o título */
 h1 {
     margin-bottom: 20px;
     font-size: 1.5rem;
-    color: #fff; 
+    color: #fff;
 }
 
-.cep-form {
-    margin-bottom: 20px;
-}
-
+/* rótulos e inputs */
 label {
     display: block;
     margin-bottom: 10px;
-    color: #fff; 
+    color: #fff;
 }
 
 input[type="text"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
 }
 
+/* estilo dos botões */
 button {
     padding: 10px;
     width: 100%;
@@ -65,18 +68,21 @@ button {
     transition: background-color 0.3s ease-in-out;
 }
 
+/* cor diferente ao passar o mouse no botão */
 button:hover {
-    background-color: #218838; 
+    background-color: #218838;
 }
 
+/* card onde o resultado aparece */
 .card {
     margin-top: 20px;
     padding: 15px;
-    background-color: #697565; 
+    background-color: #697565;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* estilo da tabela dentro do card */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -84,10 +90,50 @@ table {
 
 td {
     padding: 8px;
-    border-bottom: 1px solid #ddd; 
+    border-bottom: 1px solid #ddd;
 }
 
 .loading {
-    color: #007bff;
+    color: #000000;
     font-size: 1rem;
+}
+
+/* ajustes para telas pequenas */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    
+    input[type="text"] {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+    
+    td {
+        font-size: 0.9rem;
+    }
+}
+
+/* estilo do botão no canto superior direito */
+.top-right-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.top-right-button:hover {
+    background-color: #218838;
 }
