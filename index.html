@@ -9,18 +9,20 @@
 
 </head>
 <body>
+    <a href="index2.html" class="top-right-button">Buscar CEP por Endereço</a>
     <div class="container">
-        <h1>CEP Express</h1>
+        <h1><img src="img/img1.png" style="width: 40px; vertical-align: middle; margin-right: 1px;"> CEP Express</h1>
         <form id="cepForm">
             <label for="cep">Digite o CEP:</label>
             <input type="text" id="cep" name="cep" placeholder="Ex: 01001000" maxlength="8" required>
-            <button type="submit">Consultar</button>
+            <button type="submit">Procurar</button>
             <p id="loading" style="display:none;">Carregando...</p>
         </form>
 
         <div id="result" class="card" style="display: none;">
             <h2>Endereço</h2>
             <table>
+                
                 <tr>
                     <td><strong>CEP:</strong></td>
                     <td id="cepResult"></td>
@@ -42,6 +44,7 @@
                     <td id="uf"></td>
                 </tr>
             </table>
+            
         </div>
     </div>
 
